@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class CafeSenja17 {
     public static void main(String[] args) {
@@ -33,3 +33,6 @@ public class CafeSenja17 {
         sc.close();
     }
 }
+ 
+    
+
