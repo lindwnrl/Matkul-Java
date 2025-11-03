@@ -14,20 +14,22 @@ public class CafeSenja17 {
             pelanggan =sc.nextInt();
             totalPelanggan += pelanggan;
             finalTotalPelanggan +=totalPelanggan;
+
             for (int j = 1;j <= pelanggan;j++){;
             System.out.print("- Pelanggan "+j+" memesan berapa item? ");
             itemDibeli = sc.nextInt();
-                itemTerjual += itemDibeli;
-                finalTotalItem += itemTerjual;
+            itemTerjual += itemDibeli;
         }
-            System.out.println("Cabang "+i+":");
-                System.out.println("- Pelanggan : "+totalPelanggan);
-                System.out.println("- Item terjual :"+itemTerjual);
-                totalPelanggan =0;
-                itemTerjual = 0;
+        System.out.println("Cabang "+i+":");
+        System.out.println("- Pelanggan : "+totalPelanggan);
+        System.out.println("- Item terjual :"+itemTerjual);
+        finalTotalItem += itemTerjual;
+            totalPelanggan =0;
+            itemTerjual = 0;
         }
         System.out.println("Total seluruh Cabang :");
         System.out.println("Pelanggan : "+ finalTotalPelanggan );
         System.out.println("Item terjual : "+finalTotalItem);
+        sc.close();
     }
 }
