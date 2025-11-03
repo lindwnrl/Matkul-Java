@@ -14,6 +14,7 @@ public class CafeSenja17 {
             pelanggan =sc.nextInt();
             totalPelanggan += pelanggan;
             finalTotalPelanggan +=totalPelanggan;
+            
 
             for (int j = 1;j <= pelanggan;j++){;
             System.out.print("- Pelanggan "+j+" memesan berapa item? ");
