@@ -26,7 +26,6 @@ public class BioskopWithScanner17 {
                 break;
             }
         }
-        System.out.println(penonton);
         // System.out.println("Berikut adalah data penonton yang ada : ");
         // for (int i = 0 i <)
     }
