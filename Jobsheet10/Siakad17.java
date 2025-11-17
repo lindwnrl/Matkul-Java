@@ -21,7 +21,7 @@ public class Siakad17 {
                 nilai[i][j] = sc.nextInt();
                 totalPerSiswa += nilai [i][j];
             }
-            System.out.println("Inilah rata-rata nilai mahasiswa ke-"+(i + 1)+" :"+ totalPerSiswa/3);
+            System.out.println("Inilah rata-rata nilai mahasiswa ke-"+(i + 1)+" :"+ totalPerSiswa/jumlahMatkul);
         }
         System.out.println("Rata-rata nilai setiap Mata Kuliah:");
         
@@ -30,7 +30,7 @@ public class Siakad17 {
             for (int i = 0;i < jumlahMahasiswa;i++){
                 totalPerMatkul += nilai [i][j];
             }
-            System.out.println("Mata kuliah "+ (j + 1) + " : "+totalPerMatkul/4);
+            System.out.println("Mata kuliah "+ (j + 1) + " : "+totalPerMatkul/jumlahMahasiswa);
         }
         sc.close();
     }
