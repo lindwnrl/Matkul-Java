@@ -26,22 +26,45 @@ public class Kafe17 {
         System.out.println("========================");
         
     }
-    public static int hitungTotalHarga17(int pilihanMenu,int banyakItem){
+    public static int hitungTotalHarga17(int pilihanMenu,int banyakItem,String kodePromo){
         int [] hargaItems = {15000,20000,22000,12000,10000,18000};
 
         int hargaTotal = hargaItems [pilihanMenu - 1] *banyakItem;
+        if (kodePromo.equals("DISKON50")) {
+            hargaTotal -= hargaTotal * 50 /100;
+        }else if (kodePromo.equals("DISKON30")) {
+            hargaTotal -= hargaTotal * 30 /100;
+        }
         return hargaTotal;
     }
     public static void main(String[] args) {
         Menu("Budi",true,"DISKON30");
         Scanner sc = new Scanner(System.in);
+        int totalHargaFinal = 0;
+        while (true) {
+      
         System.out.print("Masukkan nomor menu yang ingin anda pesan :");
         int pilihanMenu = sc.nextInt();
         System.out.print("Masukkan jumlah item yang ingin dipesan :");
         int banyakItem = sc.nextInt();
-
-        int totalHarga = hitungTotalHarga17(pilihanMenu, banyakItem);
-
-        System.out.println("Total harga untuk pesanan anda : " +totalHarga);
-}
+        sc.nextLine();
+        
+        int totalHarga = hitungTotalHarga17(pilihanMenu, banyakItem,"DISKON30");
+        
+         totalHargaFinal += totalHarga;
+         System.out.print("Apa ada yang lain : (y/n) :");
+         String opsi = sc.nextLine();
+         
+         if (opsi.equalsIgnoreCase("n")) {
+            break;
+         }
+        
+        
     }
+    System.out.println("Berikut adalah total harga yang harus anda bayar : "+totalHargaFinal);
+            
+        }
+
+        
+}
+    
