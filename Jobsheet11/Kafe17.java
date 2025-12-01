@@ -1,4 +1,4 @@
-package Jobsheet11;
+
 
 import java.util.Scanner;
 
@@ -62,7 +62,7 @@ public class Kafe17 {
         
     }
     System.out.println("Berikut adalah total harga yang harus anda bayar : "+totalHargaFinal);
-            
+            sc.close();
         }
 
         
